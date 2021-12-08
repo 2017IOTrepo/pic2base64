@@ -11,9 +11,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# 生成.app bundle
 set(MACOSX_BUNDLE TRUE)
 
-set(CMAKE_PREFIX_PATH "/opt/homebrew/Cellar/qt/6.2.1/lib/cmake")
+# set(CMAKE_PREFIX_PATH "/opt/homebrew/Cellar/qt/6.2.1/lib/cmake")
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
