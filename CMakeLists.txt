@@ -19,7 +19,7 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 
-file(GLOB_RECURSE PROJECT_SOURCES "src/*.cpp" "src/*.h" "src/*.ui" "src/*.hpp")
+file(GLOB_RECURSE PROJECT_SOURCES "src/*.cpp" "src/*.h" "src/*.ui" "src/*.hpp" "src/*.mm")
 
 # set(PROJECT_SOURCES "src/main.cpp" "src/mainwindow.cpp" "src/mainwindow.h")
 

@@ -5,6 +5,7 @@
 #include "coverter.hpp"
 #include "cp.hpp"
 #include "mainwindow.h"
+#include "notification.hpp"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), trayIcon(new QSystemTrayIcon(this)) {
@@ -30,8 +31,6 @@ void MainWindow::handleClipboardAction() {
         QMessageBox::information(this, tr("提示"),
                                  tr("已成功将base64写入剪贴板！"));
     }
-    this->show();
-    this->hide();
 }
 
 QMenu *MainWindow::createMenu() {
@@ -52,10 +51,10 @@ QMenu *MainWindow::createMenu() {
 }
 
 void MainWindow::iconActivated(QSystemTrayIcon::ActivationReason reason_) {
-    switch (reason_) {
-        case QSystemTrayIcon::Trigger:
-            this->trayIcon->showMessage("右键", "右键");
-            break;
-        default:;
-    }
+    //    switch (reason_) {
+    //        case QSystemTrayIcon::Trigger:
+    //            this->trayIcon->showMessage("右键", "右键");
+    //            break;
+    //        default:;
+    //    }
 }
